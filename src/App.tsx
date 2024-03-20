@@ -1,33 +1,19 @@
 import 'normalize.css';
 import { Header } from './components/header/Header';
-import { WeekMenu } from './components/week-menu/WeekMenu';
 import './App.scss';
-import { useStore } from './store/store';
-import { useEffect } from 'react';
-import { MenuList } from './components/MenuList/MenuList';
-import { Meal } from './types/meal';
-
+import { Dashboard } from './components/Dashboard/Dashboard';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { MealBuilder } from './components/MealBuilder/MealBuilder';
 
 function App() {
-  const { availableMeals, addAvailableMeals } = useStore();
-
-  useEffect(() => {
-    const meals: Meal[] = [];
-    for(let i = 1; i < 20; i++){
-      meals.push({ id: i.toString(), title: `Dish Name ${i}`, description: `Short description of Dish ${i}` });
-    }
-    addAvailableMeals(meals);
-  }, []);
-
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <div className="app">
-        <WeekMenu />
-        <MenuList meals={availableMeals} />
-      </div>
-    </>
-
+      <Routes>
+        <Route path='/' element={<Dashboard />} />
+        <Route path='/meal/:id?' element={<MealBuilder/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
