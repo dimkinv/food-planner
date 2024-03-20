@@ -1,0 +1,19 @@
+.meal-title {
+  margin: 0;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color);
+    margin-top: 8px;
+  }
+}
+
+.drop-container{
+  height: 100%;
+}

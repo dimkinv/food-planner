@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+/* Header.css */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Dark background */
+  height: 60px;
+  padding:10px;
+  background-color: var(--secondary-background);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-picture img {
+  width: 40px;
+  /* Adjust based on your preference */
+  height: 40px;
+  border-radius: 50%;
+  /* Circular profile picture */
+  object-fit: cover;
+}
+
+.main-title {
+  color: var(--color);
+  @extend .roboto-medium;
+}

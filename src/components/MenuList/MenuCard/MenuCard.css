@@ -1,0 +1,22 @@
+/* MenuCard.css */
+.menu-card {
+    background-color: var(--card-background); /* Darker shade for contrast */
+    margin-bottom: 20px; /* Space between cards */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  .card-thumbnail {
+    width: 100%; /* Adjust based on your design */
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .card-content {
+    /* Styles for the content */
+  }
+
+  .card-title, .card-description {
+    margin: 0;
+  }

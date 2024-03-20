@@ -1,0 +1,29 @@
+.week-menu {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 90%;
+  height: calc(100vh - 120px);
+  margin-left: 10px;
+  gap: 15px;
+  margin-top:10px;
+}
+
+
+.day-column {
+  display: grid;
+  grid-template-rows: auto repeat(4, 1fr); /* Header row + 4 meal cells */
+  gap: 10px; /* Space between cells */
+}
+
+.day-title {
+  margin: 0;
+  padding-bottom: 0.5rem; /* Space between title and content */
+}
+
+
+
+.meal-cell {
+  background-color: #252525; /* Slightly lighter than column background for contrast */
+  padding: 10px;
+  border-radius: 5px; /* Optional: adds rounded corners */
+}

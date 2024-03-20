@@ -1,0 +1,37 @@
+@import '@/common.scss';
+
+.cell-card{
+  background-color: var(--light-card-background);
+  padding:5px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  border: 1px;
+  display: flex;
+
+  span{
+    flex:1
+  }
+}
+
+
+.x-button {
+  @extend .button-reset;
+  &::before {
+
+    content: '❌'; // "X" emoji
+  }
+
+  // Hover animation
+  &:hover {
+    transform: scale(1.1); // Enlarge button slightly
+  }
+
+  // Click (active) animation
+  &:active {
+    transform: scale(0.9); // Compress button slightly
+  }
+
+  // Transitions for smooth animation
+  // transition: transform 0.s ease-in-out;
+}
